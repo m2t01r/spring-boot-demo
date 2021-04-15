@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script th:src="@{/static/index.js}"></script>
+</head>
+<body>
+<!-- th:id="${user.name}" -->
+<!-- th:object=${user} 放在外边，里边的内容不用引用具体对象名称 -->
+<!-- th:href="@{http://www.baidu.com}" -->
+<!-- ht:src="@{/static/index.js}" -->
+
+	<!-- <h1 th:id="${defaultUser.username}" th:text="${defaultUser.username}" th:value="${defaultUser.username}"></h1> -->
+	<!-- <h1 th:value="${defaultUser.usersex}"></h1> -->
+	<!-- <input th:value="${#dates.format(birthday, 'yyyy-MM-dd hh:mm:ss')}"/> -->
+	<div th:text="${data}"></div>
+	<div th:utext="${data}"></div>
+	<a th:href="@{http://www.baidu.com}">hello</a>
+</body>
+</html>
