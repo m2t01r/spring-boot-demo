@@ -10,12 +10,35 @@
 <!-- th:object=${user} 放在外边，里边的内容不用引用具体对象名称 -->
 <!-- th:href="@{http://www.baidu.com}" -->
 <!-- ht:src="@{/static/index.js}" -->
+<!-- form表单提交 -->
+<!-- 遍历结果集取数 -->
+<!-- 获取资源文件 -->
 
 	<!-- <h1 th:id="${defaultUser.username}" th:text="${defaultUser.username}" th:value="${defaultUser.username}"></h1> -->
 	<!-- <h1 th:value="${defaultUser.usersex}"></h1> -->
 	<!-- <input th:value="${#dates.format(birthday, 'yyyy-MM-dd hh:mm:ss')}"/> -->
-	<div th:text="${data}"></div>
-	<div th:utext="${data}"></div>
-	<a th:href="@{http://www.baidu.com}">hello</a>
+	<!-- <div th:text="${data}"></div> -->
+	<!-- <div th:utext="${data}"></div> -->
+	<!-- <a th:href="@{http://www.baidu.com}">hello</a> -->
+	
+	<!-- <form th:action="@{/th/form}" th:object="${user}" th:method="post">
+		<input type="text" th:field="*{name}">
+		<input type="text" th:field="*{age}">
+		<input type="submit">
+	</form> -->
+	<table border="1">
+		<tr>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>生日</th>
+		</tr>
+		<tr th:each="user:${userList}">
+			<td th:text="${user.name}"></td>
+			<td th:text="${user.age}"></td>
+			<td th:text="${user.birthdate}"></td>
+		</tr>
+	</table>
+	
+	<div th:text="#{spring.thymeleaf.servlet.content-type}"></div>
 </body>
 </html>

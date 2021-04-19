@@ -13,9 +13,9 @@ public class User {
 	
 	// @JsonInclude(Include.NON_NULL) // 对字段进行过滤
 	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", locale="zh", timezone="GMT+8")
-	private Date birthdate;
+	private Date birthday;
 	
-	private String desc;
+	private String desct;
 	
 	public String getName() {
 		return name;
@@ -29,18 +29,18 @@ public class User {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-	public Date getBirthdate() {
-		return birthdate;
+	public Date getBirthday() {
+		return birthday;
 	}
-	public void setBirthdate(Date birthdate) {
-		this.birthdate = birthdate;
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 	
-	public String getDesc() {
-		return desc;
+	public String getDesct() {
+		return desct;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDesc(String desct) {
+		this.desct = desct;
 	}
 	
 }
